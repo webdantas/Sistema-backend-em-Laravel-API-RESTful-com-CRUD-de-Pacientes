@@ -5,10 +5,10 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
-use App\Models\Program;
-use App\Http\Resources\ProgramResource;
+use App\Models\Salary;
+use App\Http\Resources\SalaryResource;
 
-class ProgramController extends Controller
+class SalaryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $data = Program::latest()->get();
-        return response()->json([ProgramResource::collection($data), 'Programs fetched.']);
+        $data = Salary::latest()->get();
+        return response()->json([SalaryResource::collection($data), 'Salaries fetched.']);
     }
 
     /**
@@ -38,12 +38,12 @@ class ProgramController extends Controller
             return response()->json($validator->errors());
         }
 
-        $program = Program::create([
+        $salary = Salary::create([
             'name' => $request->name,
             'desc' => $request->desc
         ]);
 
-        return response()->json(['Program created successfully.', new ProgramResource($program)]);
+        return response()->json(['Salary created successfully.', new SalaryResource($salary)]);
     }
 
     /**
@@ -54,11 +54,11 @@ class ProgramController extends Controller
      */
     public function show($id)
     {
-        $program = Program::find($id);
-        if (is_null($program)) {
+        $salary = Salary::find($id);
+        if (is_null($salary)) {
             return response()->json('Data not found', 404);
         }
-        return response()->json([new ProgramResource($program)]);
+        return response()->json([new SalaryResource($salary)]);
     }
 
     /**
@@ -68,7 +68,7 @@ class ProgramController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Program $program)
+    public function update(Request $request, Salary $salary)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -79,11 +79,11 @@ class ProgramController extends Controller
             return response()->json($validator->errors());
         }
 
-        $program->name = $request->name;
-        $program->desc = $request->desc;
-        $program->save();
+        $salary->name = $request->name;
+        $salary->desc = $request->desc;
+        $salary->save();
 
-        return response()->json(['Program updated successfully.', new ProgramResource($program)]);
+        return response()->json(['Salary updated successfully.', new SalaryResource($salary)]);
     }
 
     /**
@@ -92,10 +92,10 @@ class ProgramController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Program $program)
+    public function destroy(Salary $salary)
     {
-        $program->delete();
+        $salary->delete();
 
-        return response()->json('Program deleted successfully');
+        return response()->json('Salary deleted successfully');
     }
 }

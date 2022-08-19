@@ -102,7 +102,7 @@
 			"response": []
 		},
 		{
-			"name": "Add program",
+			"name": "Add salary",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -121,7 +121,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the program",
+							"value": "Name of the salary",
 							"type": "text"
 						},
 						{
@@ -132,7 +132,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/programs",
+					"raw": "127.0.0.1:8000/api/salarys",
 					"host": [
 						"127",
 						"0",
@@ -142,14 +142,14 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"programs"
+						"salarys"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "List all programs",
+			"name": "List all salarys",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -171,7 +171,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the program",
+							"value": "Name of the salary",
 							"type": "text",
 							"disabled": true
 						},
@@ -184,7 +184,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/programs",
+					"raw": "127.0.0.1:8000/api/salarys",
 					"host": [
 						"127",
 						"0",
@@ -194,14 +194,14 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"programs"
+						"salarys"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Fetch single program",
+			"name": "Fetch single salary",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -223,7 +223,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the program",
+							"value": "Name of the salary",
 							"type": "text",
 							"disabled": true
 						},
@@ -236,7 +236,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/programs/1",
+					"raw": "127.0.0.1:8000/api/salarys/1",
 					"host": [
 						"127",
 						"0",
@@ -246,7 +246,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"programs",
+						"salarys",
 						"1"
 					]
 				}
@@ -254,7 +254,7 @@
 			"response": []
 		},
 		{
-			"name": "Update program",
+			"name": "Update salary",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -273,7 +273,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the program EDITED",
+							"value": "Name of the salary EDITED",
 							"type": "text"
 						},
 						{
@@ -284,7 +284,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/programs/1?name=Name of the program EDITED&desc=This is a short description EDITED",
+					"raw": "127.0.0.1:8000/api/salarys/1?name=Name of the salary EDITED&desc=This is a short description EDITED",
 					"host": [
 						"127",
 						"0",
@@ -294,13 +294,13 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"programs",
+						"salarys",
 						"1"
 					],
 					"query": [
 						{
 							"key": "name",
-							"value": "Name of the program EDITED"
+							"value": "Name of the salary EDITED"
 						},
 						{
 							"key": "desc",
@@ -312,7 +312,7 @@
 			"response": []
 		},
 		{
-			"name": "Delete program",
+			"name": "Delete salary",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -331,7 +331,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the program",
+							"value": "Name of the salary",
 							"type": "text",
 							"disabled": true
 						},
@@ -344,7 +344,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/programs/1",
+					"raw": "127.0.0.1:8000/api/salarys/1",
 					"host": [
 						"127",
 						"0",
@@ -354,7 +354,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"programs",
+						"salarys",
 						"1"
 					]
 				}
