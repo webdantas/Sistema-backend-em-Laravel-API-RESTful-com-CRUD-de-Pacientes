@@ -21,5 +21,15 @@ This repo was coded using Laravel 8
  16. **127.0.0.1:8000/api/salaries/{id}** will GET single data
  17. A PUT method do the ending point **127.0.0.1:8000/api/salaries/1?name=Name of the salary EDITED&desc=This is a short description EDITED** will edit the salary with the **id = 1**
  18. And finally, using the DELETE method you can, of course, erase the salary **id = 1** pointing the Postman at **127.0.0.1:8000/api/salaries/1**
+ 19. For Docker Version:
+     1.docker-compose up -d
+     (this command start up the Docker)
+     2.docker-compose exec app bash
+     (use this command to run the next command)
+     3.composer install
+     (this command install all dependencies)
+     4.php artisan key:generate
+     (this command generate a key)
+     5.Change the URL in the POSTMAN to localhost:8989/api/
 
 Thank You!
