@@ -11,7 +11,7 @@ This repo was coded using Laravel 8
  6. php artisan serve
  7. Create a database
  8. Edit .env.example file and change credentials for the DB section and save the file as **.env**
- 9. Open Postman and import the **API-CRUD.postman_collection.json** file
+ 9. Install and open Postman and import the **API-CRUD.postman_collection.json** file
  10. Register a user via Postman using the follow POST method ending point: **127.0.0.1:8000/api/register**
  11. Copy the access_token given in the result and add it to the e-mail and password to a POST method to the login ending point: **127.0.0.1:8000/api/login**
  12. With the GET method to **127.0.0.1:8000/api/profile** you can see your user information by entering the access_token
