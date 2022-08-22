@@ -30,8 +30,8 @@ class SalaryController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'desc' => 'required'
+            'user_id' => 'required|string|max:255',
+            'salary' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -39,8 +39,8 @@ class SalaryController extends Controller
         }
 
         $salary = Salary::create([
-            'name' => $request->name,
-            'desc' => $request->desc
+            'user_id' => $request->user_id,
+            'salary' => $request->salary
         ]);
 
         return response()->json(['Salary created successfully.', new SalaryResource($salary)]);
@@ -71,16 +71,16 @@ class SalaryController extends Controller
     public function update(Request $request, Salary $salary)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'desc' => 'required'
+            'user_id' => 'required|string|max:255',
+            'salary' => 'required'
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors());
         }
 
-        $salary->name = $request->name;
-        $salary->desc = $request->desc;
+        $salary->user_id = $request->user_id;
+        $salary->salary = $request->salary;
         $salary->save();
 
         return response()->json(['Salary updated successfully.', new SalaryResource($salary)]);

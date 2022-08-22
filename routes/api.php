@@ -13,7 +13,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function(Request $request) {
         return auth()->user();
     });
-    Route::resource('salaries', App\Http\Controllers\SalaryController::class);
+    Route::resource('salaries', App\Http\Controllers\API\SalaryController::class);
     // API route for logout user
     Route::post('/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
 });

@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "d1a01e29-b3a0-4e5b-acc5-cbdb845fb419",
+		"_postman_id": "f6403b13-43eb-4c3f-b27a-73de14cae816",
 		"name": "API-CRUD",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "245589"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -16,12 +15,12 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Admin",
+							"value": "Maria",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "marcellocorreia@gmail.com",
+							"value": "webmaria@gmail.com",
 							"type": "text"
 						},
 						{
@@ -30,10 +29,49 @@
 							"type": "text"
 						},
 						{
-							"key": "c_password",
-							"value": "",
-							"type": "text",
-							"disabled": true
+							"key": "CPF",
+							"value": "13024806858",
+							"type": "text"
+						},
+						{
+							"key": "RG",
+							"value": "246083498",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "rua dos brasões",
+							"type": "default"
+						},
+						{
+							"key": "number",
+							"value": "116",
+							"type": "default"
+						},
+						{
+							"key": "neighborhood",
+							"value": "Campo Belo",
+							"type": "default"
+						},
+						{
+							"key": "postal_code",
+							"value": "04603030",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "São Paulo",
+							"type": "default"
+						},
+						{
+							"key": "state",
+							"value": "São Paulo",
+							"type": "default"
+						},
+						{
+							"key": "birth_date",
+							"value": "1971-02-19 00:00:00",
+							"type": "default"
 						}
 					]
 				},
@@ -62,7 +100,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "1|hgXj58lZY54UnIfGLTWWChypKgRllc7X5W3lSQRM",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]
@@ -74,7 +112,7 @@
 					"formdata": [
 						{
 							"key": "email",
-							"value": "marcellocorreia@gmail.com",
+							"value": "webmaria@gmail.com",
 							"type": "text"
 						},
 						{
@@ -109,7 +147,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "3|hRnl7ysydQyJ1mp1sUMi6hoeHhunPmLJYQQluORJ",
+							"value": "4|Iu8XFZ35nl9Pm7c8Gitr5A3WvKRlHFWNjJlG11yM",
 							"type": "string"
 						}
 					]
@@ -120,19 +158,19 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
-							"value": "Name of the salary",
+							"key": "user_id",
+							"value": "1",
 							"type": "text"
 						},
 						{
-							"key": "desc",
-							"value": "This is a short description",
+							"key": "salary",
+							"value": "325698",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/salarys",
+					"raw": "127.0.0.1:8000/api/salaries",
 					"host": [
 						"127",
 						"0",
@@ -142,14 +180,14 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"salarys"
+						"salaries"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "List all salarys",
+			"name": "List all salaries",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -159,7 +197,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "3|hRnl7ysydQyJ1mp1sUMi6hoeHhunPmLJYQQluORJ",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]
@@ -171,7 +209,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the salary",
+							"value": "Name of the program",
 							"type": "text",
 							"disabled": true
 						},
@@ -184,7 +222,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/salarys",
+					"raw": "127.0.0.1:8000/api/salaries",
 					"host": [
 						"127",
 						"0",
@@ -194,7 +232,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"salarys"
+						"salaries"
 					]
 				}
 			},
@@ -211,7 +249,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "3|hRnl7ysydQyJ1mp1sUMi6hoeHhunPmLJYQQluORJ",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]
@@ -223,7 +261,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the salary",
+							"value": "Name of the program",
 							"type": "text",
 							"disabled": true
 						},
@@ -236,7 +274,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/salarys/1",
+					"raw": "127.0.0.1:8000/api/salaries/6",
 					"host": [
 						"127",
 						"0",
@@ -246,8 +284,8 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"salarys",
-						"1"
+						"salaries",
+						"6"
 					]
 				}
 			},
@@ -261,7 +299,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "3|hRnl7ysydQyJ1mp1sUMi6hoeHhunPmLJYQQluORJ",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]
@@ -272,19 +310,19 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
-							"value": "Name of the salary EDITED",
+							"key": "user_id",
+							"value": "1",
 							"type": "text"
 						},
 						{
-							"key": "desc",
-							"value": "This is a short description EDITED",
+							"key": "salary",
+							"value": "23435",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/salarys/1?name=Name of the salary EDITED&desc=This is a short description EDITED",
+					"raw": "127.0.0.1:8000/api/salaries/1?user_id=1&salary=23435",
 					"host": [
 						"127",
 						"0",
@@ -294,17 +332,17 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"salarys",
+						"salaries",
 						"1"
 					],
 					"query": [
 						{
-							"key": "name",
-							"value": "Name of the salary EDITED"
+							"key": "user_id",
+							"value": "1"
 						},
 						{
-							"key": "desc",
-							"value": "This is a short description EDITED"
+							"key": "salary",
+							"value": "23435"
 						}
 					]
 				}
@@ -319,7 +357,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "3|hRnl7ysydQyJ1mp1sUMi6hoeHhunPmLJYQQluORJ",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]
@@ -331,7 +369,7 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Name of the salary",
+							"value": "Name of the program",
 							"type": "text",
 							"disabled": true
 						},
@@ -344,7 +382,7 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/salarys/1",
+					"raw": "127.0.0.1:8000/api/salaries/1",
 					"host": [
 						"127",
 						"0",
@@ -354,7 +392,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"salarys",
+						"salaries",
 						"1"
 					]
 				}
@@ -369,7 +407,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "1|hgXj58lZY54UnIfGLTWWChypKgRllc7X5W3lSQRM",
+							"value": "1|hzs7GQRykYfMliYtSfwbpEyX71Oa1BHu4oQ9bvhj",
 							"type": "string"
 						}
 					]

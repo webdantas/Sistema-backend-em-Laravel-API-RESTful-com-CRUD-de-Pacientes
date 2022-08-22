@@ -15,7 +15,16 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8'
+            'password' => 'required|string|min:8',
+            'CPF' => 'required|string|max:255|unique:users',
+            'RG' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'number'    => 'required|string|max:10',
+            'neighborhood' => 'required|string|max:255',
+            'postal_code' => 'required|string|max:10',
+            'city' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'birth_date' => 'required|string|max:255'
         ]);
 
         if ($validator->fails()) {
@@ -25,7 +34,16 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'CPF' => $request->CPF,
+            'RG' => $request->RG,
+            'address' => $request->address,
+            'number' => $request->number,
+            'neighborhood' => $request->neighborhood,
+            'postal_code' => $request->postal_code,
+            'city' => $request->city,
+            'state' => $request->state,
+            'birth_date' => $request->birth_date
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
