@@ -31,21 +31,37 @@ services:
             - laravel-9
 
     # db mysql
-    mysql:
-        container_name: crud-api-mysql
-        image: mysql:5.7.22
-        restart: unless-stopped
+    # mysql:
+    #     container_name: crud-api-mysql
+    #     image: mysql:5.7.22
+    #     restart: unless-stopped
+    #     environment:
+    #         MYSQL_DATABASE: ${DB_DATABASE}
+    #         MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    #         MYSQL_PASSWORD: ${DB_PASSWORD}
+    #         MYSQL_USER: ${DB_USERNAME}
+    #     volumes:
+    #         - ./.docker/mysql/dbdata:/var/lib/mysql
+    #     ports:
+    #         - "3388:3306"
+    #     networks:
+    #         - laravel-9
+
+    # db postgres
+    postgres:
+        container_name: postgres_container
+        image: postgres
         environment:
-            MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-            MYSQL_PASSWORD: ${DB_PASSWORD}
-            MYSQL_USER: ${DB_USERNAME}
+            POSTGRES_USER: ${POSTGRES_USER:-postgres}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+            PGDATA: /data/postgres
         volumes:
-            - ./.docker/mysql/dbdata:/var/lib/mysql
+            - ./.docker/postgres:/data/postgres
         ports:
-            - "3388:3306"
+            - "5432:5432"
         networks:
             - laravel-9
+        restart: unless-stopped
 
     # queue
     queue:
